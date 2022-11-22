@@ -1,0 +1,149 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  color: #4D4F62;
+}
+
+body{
+  background-color: #F2F2F2;
+  padding: 80px 0;
+}
+
+.header{ 
+  text-align: center;
+}
+
+.header__text{
+  font-size: 36px;  
+  line-height: 54px;
+  letter-spacing: 0.25px;
+}
+
+.header__text--big-thin{
+  font-weight: 275;
+}
+
+.header__text--big-bold{
+  font-weight: 600;
+}
+
+.header__text--small{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;  
+
+  letter-spacing: 0.104167px;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.card-container{
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(4, 125px);
+  place-content: center;
+  gap: 30px;
+}
+
+.card{
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  padding: 32px;  
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  position: relative;
+}
+
+.card__primary-text{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.card__secondary-text{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.0902778px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.card__image{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+
+  bottom: 32px;
+  right: 32px;
+}
+
+.card-1{
+  grid-area: 2 / 1 / 4 / 2;
+  border-top: 4px solid #44D3D2;
+}
+
+.card-2{
+  grid-area: 1 / 2 / 3 / 3;
+  border-top: 4px solid #EA5454;
+}
+
+.card-3{
+  grid-area: 2 / 3 / 4 / 4;
+  border-top: 4px solid #549EF2;
+}
+
+.card-4{
+  grid-area: 3 / 2 / 5 / 3;
+  border-top: 4px solid #FCAE4A;
+}
+
+@media screen and (max-width: 1117px) {
+  .card-container{
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(2, 250px);
+  }
+
+  .card{
+    grid-area: unset;
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .header{
+    padding: 0 32px;
+  }
+
+  .header__text--big-thin,
+  .header__text--big-bold{
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.166667px;
+  }
+
+  .header__line-break{
+    display: none;
+  }
+
+  .card-container{
+    grid-template-columns: repeat(1, 311px);
+    grid-template-rows: unset;
+    grid-auto-rows: 222px;
+  }
+
+  .card__image{
+    width: 57px;
+    height: 57px;
+  }
+}
